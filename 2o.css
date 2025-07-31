@@ -1,0 +1,402 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+
+body {
+  font-family: "Playfair Display", serif;
+  background-color: rgb(242, 233, 221);
+}
+
+h2,
+h3 {
+  color: rgb(40, 40, 40);
+}
+
+p {
+  font-size: 14px;
+  color: rgb(0, 0, 115);
+}
+
+.contener {
+  max-width: 1100px;
+  margin: auto;
+  
+}
+
+#menu {
+  padding: 3rem ;
+}
+
+#menu .hadeing {
+  text-align: center;
+}
+#menu .hadeing h2 {
+  font-weight: 10;
+  font-size: 32px;
+}
+#menu .hadeing p {
+  font-size: 11px;
+  padding: 5px 0;
+}
+
+#menu .hadeing .menu-btns {
+  margin-top: 3px;
+  margin: 2rem 0;
+}
+
+#menu .hadeing .menu-btns .btn {
+  margin: 0 5px;
+  border-radius: 15px;
+  padding: 8px 12px;
+  border: none;
+  color: rgb(255, 255, 255);
+  background-color: rgb(4, 39, 70);
+  cursor: pointer;
+  font-size:13px;
+}
+
+#menu .row{
+    display: grid;
+    grid-template-columns:repeat(2 , 1fr);
+    gap: 0 3rem ;
+}
+
+#menu .row .m-itm{
+
+    display: flex;
+    margin: 35px 0;
+}
+#menu .row .m-itm img{
+    width: 90px;
+    height: 90px;
+    border-radius: 30px;
+    object-fit: cover;
+    margin: 0 15px;
+}
+
+#menu .row .itm-c h3{
+    font-size: 20px;
+    font-weight: 500;
+    position: relative;
+    border-bottom: 1px dashed gray;
+    padding-bottom: 7px;
+    margin-bottom: 10px;
+}
+
+#menu .row .itm-c h3 span{
+    position: absolute;
+    right: 0;
+
+} */
+
+/* -------- CSS الأساسي -------- */
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Playfair Display", serif;
+  background-color: rgb(242, 233, 221);
+  padding: 2rem;
+}
+
+h2, h3 {
+  color: rgb(40, 40, 40);
+}
+
+p {
+  font-size: 14px;
+  color: rgb(0, 0, 115);
+}
+
+.contener {
+  max-width: 1100px;
+  margin: auto;
+}
+
+#menu {
+  padding: 3rem;
+}
+
+#menu .hadeing {
+  text-align: center;
+}
+
+#menu .hadeing h2 {
+  font-weight: 10;
+  font-size: 32px;
+}
+
+#menu .hadeing p {
+  font-size: 11px;
+  padding: 5px 0;
+}
+
+#menu .hadeing .menu-btns {
+  margin: 2rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.menu-btns .btn {
+  margin: 5px;
+  border-radius: 15px;
+  padding: 8px 16px;
+  border: none;
+  color: white;
+  background-color: rgb(4, 39, 70);
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.menu-btns .btn:hover {
+  background-color: rgb(10, 60, 100);
+  transform: scale(1.05);
+}
+
+.menu-btns .btn.active {
+  background-color: #c69c6d;
+  color: rgb(179, 67, 67);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+#menu .row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+}
+
+#menu .row .coll {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+#menu .row .m-itm {
+  display: flex;
+  gap: 15px;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+ 
+  align-items: center;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+}
+
+.m-itm.fade-in {
+  opacity: 1;
+}
+
+
+.fade-in {
+  animation: fadeIn 0.4s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+#menu .row .m-itm:hover {
+  background-color: rgba(4, 39, 70, 0.07);
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+#menu .row .m-itm img {
+  width: 90px;
+  height: 90px;
+  border-radius: 30px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+#menu .row .m-itm img:hover {
+  transform: scale(1.1);
+}
+
+#menu .row .itm-c h3 {
+  font-size: 20px;
+  font-weight: 500;
+  position: relative;
+  border-bottom: 2px solid #264653;
+  padding-bottom: 7px;
+  margin-bottom: 10px;
+}
+
+#menu .row .itm-c h3 span {
+  position: absolute;
+  right: 0;
+  color: #e76f51;
+  font-weight: 700;
+}
+
+/* --- Animation --- */
+@keyframes fadeSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* ✅ عند إظهار العنصر */
+.m-itm.show {
+  display: flex;
+  opacity: 0;
+  transform: scale(1);
+  transition: all 0.3s ease;
+}
+
+/* ✅ عند إخفاء العنصر */
+.m-itm.hide {
+  display: none;
+  opacity: 0;
+  transform: scale(0.9);
+  transition: all 0.3s ease;
+}
+
+/* ✅ تمييز الزر النشط */
+.menu-btns .btn.active {
+  background-color: #c69c6d; /* لون مختلف */
+  color: rgb(255, 255, 255);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+
+/* -------- Popup -------- */
+.popup {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  padding: 20px;
+}
+
+.popup-content {
+  background: #fff;
+  padding: 20px;
+  max-width: 500px;
+  width: 90%;
+  border-radius: 12px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 0 20px rgba(0,0,0,0.4);
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.popup-content img {
+  max-width: 100%;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+.popup-content h3 {
+  margin: 10px 0 5px;
+  color: #264653;
+  font-size: 24px;
+}
+
+.popup-content p {
+  margin: 5px 0;
+  color: #333;
+  font-size: 16px;
+}
+
+.popup .close {
+  position: absolute;
+  top: 12px;
+  right: 15px;
+  font-size: 28px;
+  cursor: pointer;
+  color: #333;
+  font-weight: bold;
+  user-select: none;
+  transition: color 0.3s ease;
+}
+
+.popup .close:hover {
+  color: #e76f51;
+}
+
+/* -------- Responsive Fixes -------- */
+@media (max-width: 768px) {
+  body {
+    padding: 1rem;
+  }
+
+  .contener {
+    padding: 0 10px;
+  }
+
+  #menu {
+    padding: 2rem 1rem;
+  }
+
+  #menu .hadeing h2 {
+    font-size: 24px;
+  }
+
+  #menu .hadeing p {
+    font-size: 12px;
+  }
+
+  #menu .hadeing .menu-btns {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  #menu .hadeing .menu-btns .btn {
+    width: 90%;
+    padding: 12px;
+    font-size: 15px;
+  }
+
+  #menu .row .m-itm {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 12px;
+  }
+
+  #menu .row .itm-c h3 {
+    font-size: 18px;
+  }
+
+  #menu .row .itm-c p {
+    font-size: 13px;
+  }
+
+  .popup-content h3 {
+    font-size: 22px;
+  }
+
+  .popup-content p {
+    font-size: 14px;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
